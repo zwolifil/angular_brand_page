@@ -1,0 +1,123 @@
+#mainNav {
+  background-color: white !important;
+  padding: 0;
+}
+
+.container {
+  margin: 0!important;
+  width: 100%!important;
+  max-width: inherit!important;
+}
+
+.lang{
+  border-right: thin;
+  border-right-style: solid;
+}
+.jap-lang{
+  border-left: thin;
+  border-left-style: solid;
+  line-height: 145%;
+  font-size: 73%!important;
+}
+*{
+  color:#3F3F3F!important;
+}
+a:hover{
+  color:#1b1e21!important;
+}
+.nav-item{
+  cursor: pointer!important;
+}
+
+.sec-navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8d7da;
+  height: 40px;
+  width:100%;
+  position: fixed;
+  top: 70px;
+  z-index: 1000;
+}
+
+.sub-nav {
+  position: fixed;
+  background-color: white;
+  margin: auto;
+  list-style-type: none;
+  padding: 0;
+  width: inherit;
+  padding: 0 1%;
+  text-align: center;
+}
+
+.h-nav {
+  font-weight: 600;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #464a4e;
+  font-size: 25px;
+  width: 20%;
+  padding: 5px 0;
+  margin: 0;
+  margin-left: 1%;
+  text-align: left;
+}
+
+.sec-nav-ul {
+  width: 80%;
+  text-align: right;
+  list-style-type: none;
+  display: inline-flex;
+  padding: 5px 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sec-nav-ul li {
+  padding: 0;
+  margin: auto;
+}
+
+.sec-nav-ul li p, .sub-nav li {
+  margin: auto;
+  padding: 3px 0;
+  font-weight: 300;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #464a4e;
+  cursor: pointer;
+  outline: none;
+}
+.sub-nav li {
+  width: 100%;
+  padding: 5px 0;
+}
+.sub-nav li:hover {
+  color: #1b1e21;
+  font-weight: 600;
+  margin-right: 0;
+}
+
+/*-----------------------------RESPONSIVE CSS------------------------------*/
+.collapse-mobile {
+  width: 100%;
+  text-align: center;
+}
+.collapse-mobile ul .nav-item {
+  margin: 5px 0;
+}
+.collapse-mobile ul .nav-item a{
+  border: 0;
+  display: inline;
+}
+.collapse-mobile ul .nav-item .sub-nav {
+  width: 100%;
+  position: inherit;
+  text-align: center!important;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .sec-navbar {
+    display: none;
+  }
+}

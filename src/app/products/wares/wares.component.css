@@ -1,0 +1,109 @@
+.container {
+  display: block;
+  margin-top: 130px;
+  text-align: center;
+}
+.d-block {
+  text-align: center;
+  padding: 5px;
+  margin: 0 5%;
+}
+
+.next {
+  margin: 50px 0;
+}
+.parallax {
+  height: 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.band-parallax {
+  background-image: url('../../../assets/images/chilaby-opaska.jpg');
+}
+
+#gotoTop {
+  /*display: none;*/
+  z-index: 299;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  background-color: rgba(0,0,0,0.3);
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFF;
+  top: auto;
+  left: auto;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.icon-angle-up i{
+  border: solid #FFF;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  margin-top : 35%;
+  position: absolute;
+  border: solid #6c757d;
+  border-width: 0 3px 3px 0;
+  margin-left: -27%;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);margin-left: -23%;
+  margin-top:35%;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+img {
+  width: 100%;
+  margin: auto;
+}
+
+h1, h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #464a4e;
+}
+h2 {
+  font-size: 1.35rem;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #464a4e;
+}
+
+ul {
+  width: 80%;
+  text-align: right;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row-reverse;
+  float: right;
+  padding: 5px 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  text-align: center;
+  margin: 0 5%;
+}
+li p {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-top: 90px;
+  }
+}

@@ -1,0 +1,58 @@
+<section class="section-main">
+  <div class="container" id="beacons">
+    <h1>Beacons</h1>
+    <hr>
+    <div class="container graphics">
+      <div class="simple-graphic">
+        <svg routerLink="ybeacon">
+          <rect x="10" y="10" rx="10" ry="10" width="90" height="90"></rect>
+        </svg>
+        <ul>
+          <li>
+            <p>Ybeacon</p>
+          </li>
+        </ul>
+      </div>
+      <div class="simple-graphic">
+        <svg routerLink="mucount">
+          <rect x="30" y="5" rx="10" ry="10" width="40" height="90">
+          </rect>
+          <circle cx="55" cy="55" r="10">
+          </circle>
+        </svg>
+        <ul>
+          <li>
+            <p>Mucount</p>
+          </li>
+        </ul>
+      </div>
+      <div class="simple-graphic">
+        <svg routerLink="chillaby" data-toggle="collapse" data-target="#demo">
+          <rect x="25" y="10" rx="10" ry="10" width="60" height="90"></rect>
+        </svg>
+        <ul>
+          <li>
+            <p>Chillaby</p>
+          </li>
+        </ul>
+      </div>
+      <div class="simple-graphic">
+        <svg routerLink="wildfish">
+          <rect x="15" y="25" rx="10" ry="10" width="80" height="60"></rect>
+          <line x1="15" y1="55" x2="10" y2="55"></line>
+          <line x1="10" y1="56.5" x2="10" y2="5"></line>
+          <line x1="95" y1="55" x2="100" y2="55"></line>
+          <line x1="100" y1="56.5" x2="100" y2="5"></line>
+        </svg>
+        <ul>
+          <li>
+            <p>Wildfish</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 100%" id="demo" class="collapse">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

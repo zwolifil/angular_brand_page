@@ -1,0 +1,182 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a routerLink="/glowna" class="standard-logo"><img src="../../assets/images/yoberi.png" alt="Yoberi"></a>
+    <a class="navbar-toggler navbar-toggler-right" (click)="isCollapse = !isCollapse" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" routerLink="glowna/iot" routerLinkActive="active" >Iot</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" routerLink="glowna/o_nas" routerLinkActive="active">O nas</a>
+        </li>
+        <li class="nav-item" id="products">
+            <a  class="nav-link js-scroll-trigger" (mouseover)="visible()" (mouseleave)="hidden()">Produkty</a>
+            <ul class="sub-nav" [@nav]="state" (mouseover)="visible()" (mouseleave)="hidden()">
+              <li routerLink="mucount">Mucount</li>
+              <li routerLink="infpl">Inf.pl</li>
+              <li routerLink="wildfish">Wildfish</li>
+              <li routerLink="software">Software</li>
+              <li routerLink="sensory">Sensory</li>
+              <li routerLink="venite">Venite</li>
+              <li routerLink="wares">Wares</li>
+            </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" routerLink="/kariera" routerLinkActive="active">Kariera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" routerLinkActive="active">Zap.Ofertowe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" routerLink="glowna/kontakt" routerLinkActive="active">Kontakt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger lang">En</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger jap-lang">日本語</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="collapse-mobile" id="navbar-mobile" [collapse]="isCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" routerLink="glowna/iot" (click)="isCollapse = !isCollapse">Iot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" routerLink="glowna/o_nas" (click)="isCollapse = !isCollapse">O nas</a>
+      </li>
+      <li class="nav-item" id="products">
+        <a  class="nav-link js-scroll-trigger" (click)="visible_subnav()">Produkty</a>
+        <ul class="sub-nav" [@nav]="state">
+          <li routerLink="mucount" (click)="isCollapse = !isCollapse; visible_subnav()">Mucount</li>
+          <li routerLink="infpl" (click)="isCollapse = !isCollapse; visible_subnav()">Inf.pl</li>
+          <li routerLink="wildfish" (click)="isCollapse = !isCollapse; visible_subnav()">Wildfish</li>
+          <li routerLink="software" (click)="isCollapse = !isCollapse; visible_subnav()">Software</li>
+          <li routerLink="sensory" (click)="isCollapse = !isCollapse; visible_subnav()">Sensory</li>
+          <li routerLink="venite" (click)="isCollapse = !isCollapse; visible_subnav()">Venite</li>
+          <li routerLink="wares" (click)="isCollapse = !isCollapse; visible_subnav()">Wares</li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" routerLink="/kariera" (click)="isCollapse = !isCollapse">Kariera</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" (click)="isCollapse = !isCollapse">Zap.Ofertowe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" routerLink="glowna/kontakt" (click)="isCollapse = !isCollapse">Kontakt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger lang" (click)="isCollapse = !isCollapse">En</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger jap-lang" (click)="isCollapse = !isCollapse">日本語</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<nav class="sec-navbar" id="Mucount" *ngIf="Is_display[0]">
+  <h2 class="h-nav">Mucount</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="mucount/licznik">Licznik</p>
+    </li>
+    <li>
+      <p routerLink="mucount/zamowienie">Zamówienie</p>
+    </li>
+    <li>
+      <p routerLink="mucount/faq">FAQ</p>
+    </li>
+    <li>
+      <p routerLink="mucount/logowanie">Logowanie</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Infpl" *ngIf="Is_display[1]">
+  <h2 class="h-nav">Inf.pl</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="infpl/ybeacon">Ybeacon</p>
+    </li>
+    <li>
+      <p routerLink="infpl/infpl">INF.PL</p>
+    </li>
+    <li style="float: right">
+      <p routerLink="infpl/yoberi1609">Yoberi 1609</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Wildfish" *ngIf="Is_display[2]">
+  <h2 class="h-nav">Wildfish</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="wildfish/nemo">Nemo</p>
+    </li>
+    <li>
+      <p routerLink="wildfish/barracuda">Barracuda</p>
+    </li>
+    <li>
+      <p routerLink="wildfish/bluetang">Blue Tang</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Software" *ngIf="Is_display[3]">
+  <h2 class="h-nav">Software</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="software/aviko">Aviko Benefits</p>
+    </li>
+    <li>
+      <p routerLink="software/polspecialist">Poland Specialist</p>
+    </li>
+    <li>
+      <p routerLink="software/polskieradio">Player Polskie Radio</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Sensory" *ngIf="Is_display[4]">
+  <h2 class="h-nav">Sensory</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="sensory/chilaby">Chilaby</p>
+    </li>
+    <li>
+      <p routerLink="sensory/pinparking">PIN Parking</p>
+    </li>
+    <li>
+      <p routerLink="sensory/isensor">iSensor</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Venite" *ngIf="Is_display[5]">
+  <h2 class="h-nav">Venite</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="venite/ekarty">eKarty</p>
+    </li>
+    <li>
+      <p routerLink="venite/system">System</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Wares" *ngIf="Is_display[6]">
+  <h2 class="h-nav">Wares</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="wares/hotmo">Hotmo</p>
+    </li>
+    <li>
+      <p routerLink="wares/integrator">Integrator</p>
+    </li>
+    <li>
+      <p routerLink="wares/lora">LoRa Advanced</p>
+    </li>
+  </ul>
+</nav>

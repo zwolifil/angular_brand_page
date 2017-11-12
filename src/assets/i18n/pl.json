@@ -1,0 +1,9 @@
+{
+  "Header" : "Nagłówek działa!",
+  "Body" : "Apka działa!",
+  "Footer" : {
+    "FooterHead": "Kontakt",
+    "FooterBody": " 00-819 Warszawa\n  ul. Złota 61\n  tel. +48 885 854 993\n  kontakt@yoberi.com",
+    "FooterFooter": "Copyright Yoberi 2017 | Wszystkie prawa zastrzeżone"
+  }
+}

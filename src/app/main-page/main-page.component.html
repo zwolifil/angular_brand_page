@@ -1,0 +1,202 @@
+<!-- Slider
+============================================= -->
+<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix" data-speed="600" data-loop="true" data-autoplay="4000" style="height: 649px">
+  <div class="slider-parallax-inner" style="height: 649px; transform: translateY(0px);">
+
+    <div class="swiper-container swiper-parent">
+      <div  class="swiper-wrapper">
+        <div [@iot]="states[0]" #Slide class="swiper-slide" style="background-image: url('../../assets/images/slider/iot.jpg'); background-position: center top;">
+          <div  class="container clearfix">
+            <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.28505; top: 244.5px;">
+
+              <div class="emphasis-title">
+                <h1 >
+                                    <span class="text-rotater nocolor">
+                                        <span class="t-rotate t700 font-body opm-large-word">IoT.</span>
+                                    </span>
+                </h1>
+                <p class="lead" >Made in Poland.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div [@chillaby]="states[1]" #Slide class="swiper-slide" style="background-image: url('../../assets/images/slider/chilaby.jpg');">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.28505; top: 244.5px;">
+
+              <div class="emphasis-title">
+                <h1>
+                                    <span class="text-rotater nocolor">
+                                        <span class="t-rotate t700 font-body opm-large-word">Chilaby</span>
+                                    </span>
+                </h1>
+                <a routerLink="/produkty/chillaby" class="button button-desc button-border button-rounded center"><div>Zobacz więcej</div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div [@muCount]="states[2]" #Slide class="swiper-slide" style="background-image: url('../../assets/images/slider/multibox.jpg'); background-position: center top;">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.28505; top: 244.5px;">
+
+              <div class="emphasis-title">
+                <h1>
+                                    <span class="text-rotater nocolor">
+                                        <span class="t-rotate t700 font-body opm-large-word">muCount</span>
+                                    </span>
+                </h1>
+                <a routerLink="/produkty/mucount" class="button button-desc button-border button-rounded center"><div>Zobacz więcej</div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div [@ybeacon]="states[3]" #Slide class="swiper-slide" style="background-image: url('../../assets/images/slider/ybeacon.jpg'); background-position: center top;">
+          <div class="container clearfix">
+            <div  class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.28505; top: 244.5px;">
+
+              <div class="emphasis-title">
+                <h1>
+                                    <span class="text-rotater nocolor">
+                                        <span class="t-rotate t700 font-body opm-large-word">yBeacon</span>
+                                    </span>
+                </h1>
+                <a routerLink="/produkty/ybeacon" class="button button-desc button-border button-rounded center"><div>Zobacz więcej</div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div [@wildfish]="states[4]" #Slide class="swiper-slide" style="background-image: url('../../assets/images/slider/wildfish.jpg'); background-position: center top;">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.28505; top: 244.5px;">
+
+              <div class="emphasis-title">
+                <h1>
+                                    <span class="text-rotater nocolor">
+                                        <span class="t-rotate t700 font-body opm-large-word">Wildfish</span>
+                                    </span>
+                </h1>
+                <a routerLink="/produkty/wildfish" class="button button-desc button-border button-rounded center"><div>Zobacz więcej</div></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div (mouseup)="ChangeLeft()" (mousedown)="onAnimateLeft()" id="slider-arrow-left" style="opacity: 1.28505"><i class="icon-angle-left"></i></div>
+      <div (mouseup)="ChangeRight()" (mousedown)="onAnimateRight()" id="slider-arrow-right" style="opacity: 1.28505"><i class="icon-angle-right"></i></div>
+    </div>
+
+    <a  (click)="GoToIot()" data-offset="60" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+    <div #iot style="height: 70px; transform: translateY(-100%); visibility: hidden"></div>
+  </div>
+</section>
+
+<!-- Content
+============================================= -->
+<section id="content">
+  <div class="content-wrap nopadding">
+    <div class="container clearfix">
+      <div class="center" style="max-width: 960px; margin:0 auto;">
+        <a class="anchor-home-page" id="section-iot"></a>
+        <h3>Internet rzeczy</h3>
+        <i class="home-icon fa fa-wikipedia-w" aria-hidden="true"></i>
+        <p class="lead">„Koncepcja, wedle której jednoznacznie identyfikowalne przedmioty mogą pośrednio albo bezpośrednio gromadzić, przetwarzać lub wymieniać dane za pośrednictwem sieci komputerowej.” - <i>Wikipedia</i></p>
+        <i class="home-icon fa fa-scissors" aria-hidden="true"></i>
+        <p class="lead">Yoberi realizuje projekty IoT szyte na miarę jak u krawca. Najpierw tworzymy architekturę zleconego zadania. Potem konstruujemy urządzenia i złożone algorytmy analizy oraz przetwarzania danych. Nasze innowacyjne urządzenia posiadają dedykowany firmware i platformy zarządzające.</p>
+        <i class="home-icon fa fa-battery-three-quarters" aria-hidden="true"></i>
+        <p class="lead">W pracy wykorzystujemy głównie technologie oparte o bardzo niską emisje energii oraz urządzenia z autonomicznym zasilaniem. Nasze urządzenia są opakowane w specjalnie zaprojektowane obudowy, które spełniają niezbędne wymagania techniczne i wzornictwa przemysłowego.</p>
+        <i class="home-icon fa fa-plug" aria-hidden="true"></i>
+        <p class="lead">Wszystkie elementy systemu łączą się przy pomocy wyspecjalizowanych protokołów komunikacji. Tworzone przez nas rozwiązania  potrafią się doskonale integrować z istniejącymi aplikacjami. Usługi systemu udostępniamy poprzez api i serwisy internetowe.</p>
+        <i class="home-icon fa fa-coffee" aria-hidden="true"></i>
+        <p class="lead">Użytkownikom końcowym dostarczamy dedykowane aplikacje mobilne, przygotowujemy procedury działania i pokazujemy sposoby użycia.</p>
+      </div>
+    </div>
+
+    <div class="section parallax dark nobottommargin nobottomborder" style="background-color:#f9f9f9; padding-top:0px; margin-top:40px;">
+      <div class="container clearfix">
+        <div style="max-width: 100%">
+          <img class="shadow" style="max-width: 100%" src="../../assets/images/internet-of-things.jpg" data-animate="fadeInUp" alt="Chrome" class="fadeInUp animated">
+        </div>
+      </div>
+    </div>
+    <div #AboutUs style="height: 70px; transform: translateY(-100%); visibility: hidden"></div>
+    <div class="container clearfix">
+      <div class="center" style="max-width: 960px; margin: auto;">
+        <a class="anchor-home-page" id="o-nas"></a>
+        <h3>O nas</h3>
+        <p class="lead" >Yoberi - spółka z polskim kapitałem, specjalizująca się we wdrożeniach systemów w oparciu o technologie IoT. Swoje projekty opiera na autorskich pomysłach i własnych realizacjach. Oferowane systemy składają się z zaawansowanych technologicznie urządzeń wraz z oprogramowaniem oraz dedykowanych aplikacji.</p>
+        <p class="lead">Spółka powstała w 2011 roku. Jest członkiem Pomorskiego Parku Naukowo-Technologicznego w Gdyni oraz Ginza Hub w Tokyo. Posiada oddziały i centra serwisowe na terenie Polski oraz Japonii. Z sukcesem realizuje projekty międzynarodowe na rynku B2B, B2B2C.</p>
+      </div>
+    </div>
+
+    <div class="section parallax dark nobottommargin nobottomborder" style="background-color:#f9f9f9; padding-top:0px; margin-top:0px;">
+      <div class="container clearfix">
+        <div style="position: relative; height: 552px; max-width: 960px; margin:0 auto -60px;" data-height-lg="552" data-height-md="541" data-height-sm="414" data-height-xs="253" data-height-xxs="170">
+          <!--<img class="shadow" src="images/yoberi-ppnt.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" alt="Chrome" class="fadeInUp animated">-->
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- CONTACT -->
+    <div #contact id="section-contact" class="page-section notoppadding">
+      <div class="container clearfix">
+        <div class="divcenter topmargin" style="max-width: 850px;padding-top:75px;">
+          <div class="contact-widget">
+            <div class="contact-form-result"></div>
+            <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+              <div class="form-process"></div>
+              <div class="col_half">
+                <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Imię" />
+              </div>
+              <div class="col_half col_last">
+                <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Adres Email" />
+              </div>
+              <div class="clear"></div>
+              <div class="col_one_third">
+                <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control" placeholder="Telefon" />
+              </div>
+              <div class="col_two_third col_last">
+                <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control border-form-control" placeholder="Temat" />
+              </div>
+              <div class="clear"></div>
+              <div class="col_full">
+                <textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Treść wiadomości"></textarea>
+              </div>
+
+              <div class="g-recaptcha" data-sitekey="6Ld-TyMUAAAAACJtKK_3_85GjeWDZblPUaFLcxcO">
+                <div style="width: 304px; height: 78px;">
+                  <div>
+                    <!--<iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Ld-TyMUAAAAACJtKK_3_85GjeWDZblPUaFLcxcO&amp;co=aHR0cDovL3lvYmVyaS5jb206ODA.&amp;hl=pl&amp;v=r20171003155951&amp;size=normal&amp;cb=qaeljenxlziy" title="widżet reCAPTCHA" width="304" height="78" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>-->
+                  </div>
+                  <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
+                </div>
+              </div>
+
+              <div class="col_full center">
+                <button class="button button-border button-circle t500 noleftmargin topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Wyślij</button>
+              </div>
+              <div class="clear"></div>
+              <div class="col_full hidden">
+                <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="gotoTop" (click)="GoToTop()" class="icon-angle-up" style="display: block;"><i></i></div>
