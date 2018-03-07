@@ -149,6 +149,7 @@ export class MainPageComponent implements OnInit, AfterViewInit{
   states: string[] = new Array(this.sliderCount);
   tempState = 0;
   tempDirection = 'none';
+  isClicked = false;
   @ViewChild('iot') iot: ElementRef;
   @ViewChild('AboutUs') AboutUs: ElementRef;
   @ViewChild('contact') Contact: ElementRef;
@@ -161,7 +162,7 @@ export class MainPageComponent implements OnInit, AfterViewInit{
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.name = params['id'];
-      if (this.name === 'iot') {
+      if (this.name === 'cos') {
         this.GoToIot();
       } else if (this.name === 'o_nas') {
         this.GoToAboutUs();
@@ -185,6 +186,7 @@ export class MainPageComponent implements OnInit, AfterViewInit{
   }
 
   ChangeLeft() {
+    this.isClicked = true;
     if (this.tempDirection === 'none') {
       if (this.tempState > 0) {
         this.states[this.tempState - 1] = 'right';
@@ -207,6 +209,7 @@ export class MainPageComponent implements OnInit, AfterViewInit{
   }
 
   ChangeRight() {
+    this.isClicked = true;
     if (this.tempDirection === 'none') {
       if (this.tempState < this.sliderCount - 1) {
         this.states[this.tempState + 1] = 'left';
@@ -229,23 +232,29 @@ export class MainPageComponent implements OnInit, AfterViewInit{
   }
 
   onAnimateLeft() {
-    this.states[this.tempState] = 'left';
-    if (this.tempState > 0) {
-      this.states[this.tempState - 1] = 'in';
-      this.tempState--;
-    } else {
-      this.states[this.sliderCount - 1] = 'in';
-      this.tempState = this.sliderCount - 1;
+    if (this.isClicked === true) {
+      this.states[this.tempState] = 'left';
+      if (this.tempState > 0) {
+        this.states[this.tempState - 1] = 'in';
+        this.tempState--;
+      } else {
+        this.states[this.sliderCount - 1] = 'in';
+        this.tempState = this.sliderCount - 1;
+      }
+      this.isClicked = false;
     }
   }
   onAnimateRight() {
-    this.states[this.tempState] = 'right';
-    if (this.tempState < this.sliderCount - 1) {
-      this.states[this.tempState + 1] = 'in';
-      this.tempState++;
-    } else {
-      this.states[0] = 'in';
-      this.tempState = 0;
+    if (this.isClicked === true) {
+      this.states[this.tempState] = 'right';
+      if (this.tempState < this.sliderCount - 1) {
+        this.states[this.tempState + 1] = 'in';
+        this.tempState++;
+      } else {
+        this.states[0] = 'in';
+        this.tempState = 0;
+      }
+      this.isClicked = false;
     }
   }
 

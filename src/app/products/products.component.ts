@@ -7,11 +7,6 @@ import {Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular
 })
 export class ProductsComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('Ybeacon') Ybeacon: ElementRef;
-  @ViewChild('PinParking') PinParking: ElementRef;
-  @ViewChild('Chillaby') Chillaby: ElementRef;
-  @ViewChild('Venite') Venite: ElementRef;
-
   constructor() { }
 
   ngOnInit() {

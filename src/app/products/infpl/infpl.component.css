@@ -7,7 +7,7 @@
   margin: 0 5%;
 }
 .next {
-   margin: 50px 0;
+   margin: 0;
  }
 .parallax {
   height: 500px;
@@ -21,7 +21,7 @@
   background-image: url('../../../assets/images/infpl-full.jpg');
 }
 .beac-parallax {
-  background-image: url('../../../assets/images/ybeacon_1.jpg');
+  background-image: url('../../../assets/images/infpl-full.jpg');
 }
 
 img {
@@ -48,5 +48,8 @@ p {
 @media (max-width: 600px) {
   .container {
     margin-top: 90px;
+  }
+  .next {
+    margin-top: 0;
   }
 }

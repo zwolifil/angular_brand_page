@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a routerLink="/glowna" class="standard-logo"><img src="../../assets/images/yoberi.png" alt="Yoberi"></a>
+    <a routerLink="/glowna" class="standard-logo"><img src="../../assets/images/cos.jpg" alt="Angular"></a>
     <a class="navbar-toggler navbar-toggler-right" (click)="isCollapse = !isCollapse" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </a>
@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" routerLink="glowna/iot" routerLinkActive="active" >Iot</a>
+          <a class="nav-link js-scroll-trigger" routerLink="glowna/cos" routerLinkActive="active" >Cos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" routerLink="glowna/o_nas" routerLinkActive="active">O nas</a>
@@ -17,20 +17,20 @@
         <li class="nav-item" id="products">
             <a  class="nav-link js-scroll-trigger" (mouseover)="visible()" (mouseleave)="hidden()">Produkty</a>
             <ul class="sub-nav" [@nav]="state" (mouseover)="visible()" (mouseleave)="hidden()">
-              <li routerLink="mucount">Mucount</li>
-              <li routerLink="infpl">Inf.pl</li>
-              <li routerLink="wildfish">Wildfish</li>
+              <li routerLink="count">Count</li>
+              <li routerLink="inf">Inf</li>
+              <li routerLink="wild">Wild</li>
               <li routerLink="software">Software</li>
               <li routerLink="sensory">Sensory</li>
-              <li routerLink="venite">Venite</li>
-              <li routerLink="wares">Wares</li>
+              <li routerLink="ven">Ven</li>
+              <li routerLink="ware">Ware</li>
             </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" routerLink="/kariera" routerLinkActive="active">Kariera</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" routerLinkActive="active">Zap.Ofertowe</a>
+          <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" routerLinkActive="active">OFERTA</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" routerLink="glowna/kontakt" routerLinkActive="active">Kontakt</a>
@@ -47,7 +47,7 @@
   <div class="collapse-mobile" id="navbar-mobile" [collapse]="isCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" routerLink="glowna/iot" (click)="isCollapse = !isCollapse">Iot</a>
+        <a class="nav-link js-scroll-trigger" routerLink="glowna/cos" (click)="isCollapse = !isCollapse">Cos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" routerLink="glowna/o_nas" (click)="isCollapse = !isCollapse">O nas</a>
@@ -55,20 +55,20 @@
       <li class="nav-item" id="products">
         <a  class="nav-link js-scroll-trigger" (click)="visible_subnav()">Produkty</a>
         <ul class="sub-nav" [@nav]="state">
-          <li routerLink="mucount" (click)="isCollapse = !isCollapse; visible_subnav()">Mucount</li>
-          <li routerLink="infpl" (click)="isCollapse = !isCollapse; visible_subnav()">Inf.pl</li>
-          <li routerLink="wildfish" (click)="isCollapse = !isCollapse; visible_subnav()">Wildfish</li>
+          <li routerLink="count" (click)="isCollapse = !isCollapse; visible_subnav()">count</li>
+          <li routerLink="inf" (click)="isCollapse = !isCollapse; visible_subnav()">Inf</li>
+          <li routerLink="wild" (click)="isCollapse = !isCollapse; visible_subnav()">Wild</li>
           <li routerLink="software" (click)="isCollapse = !isCollapse; visible_subnav()">Software</li>
           <li routerLink="sensory" (click)="isCollapse = !isCollapse; visible_subnav()">Sensory</li>
-          <li routerLink="venite" (click)="isCollapse = !isCollapse; visible_subnav()">Venite</li>
-          <li routerLink="wares" (click)="isCollapse = !isCollapse; visible_subnav()">Wares</li>
+          <li routerLink="ven" (click)="isCollapse = !isCollapse; visible_subnav()">Ven</li>
+          <li routerLink="ware" (click)="isCollapse = !isCollapse; visible_subnav()">Ware</li>
         </ul>
       </li>
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" routerLink="/kariera" (click)="isCollapse = !isCollapse">Kariera</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" (click)="isCollapse = !isCollapse">Zap.Ofertowe</a>
+        <a class="nav-link js-scroll-trigger" routerLink="/zapytania_ofertowe" (click)="isCollapse = !isCollapse">Oferta</a>
       </li>
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" routerLink="glowna/kontakt" (click)="isCollapse = !isCollapse">Kontakt</a>
@@ -82,48 +82,48 @@
     </ul>
   </div>
 </nav>
-<nav class="sec-navbar" id="Mucount" *ngIf="Is_display[0]">
-  <h2 class="h-nav">Mucount</h2>
+<nav class="sec-navbar" id="count" *ngIf="Is_display[0]">
+  <h2 class="h-nav">count</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="mucount/licznik">Licznik</p>
+      <p routerLink="count/cos">Cos</p>
     </li>
     <li>
-      <p routerLink="mucount/zamowienie">Zamówienie</p>
+      <p routerLink="count/zamowienie">Zamówienie</p>
     </li>
     <li>
-      <p routerLink="mucount/faq">FAQ</p>
+      <p routerLink="count/faq">FAQ</p>
     </li>
     <li>
-      <p routerLink="mucount/logowanie">Logowanie</p>
+      <p routerLink="count/logowanie">Logowanie</p>
     </li>
   </ul>
 </nav>
-<nav class="sec-navbar" id="Infpl" *ngIf="Is_display[1]">
-  <h2 class="h-nav">Inf.pl</h2>
+<nav class="sec-navbar" id="Inf" *ngIf="Is_display[1]">
+  <h2 class="h-nav">Inf</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="infpl/ybeacon">Ybeacon</p>
+      <p routerLink="inf/cos">Cos</p>
     </li>
     <li>
-      <p routerLink="infpl/infpl">INF.PL</p>
+      <p routerLink="inf/inf">INF</p>
     </li>
     <li style="float: right">
-      <p routerLink="infpl/yoberi1609">Yoberi 1609</p>
+      <p routerLink="inf/lorem">LOREM</p>
     </li>
   </ul>
 </nav>
-<nav class="sec-navbar" id="Wildfish" *ngIf="Is_display[2]">
-  <h2 class="h-nav">Wildfish</h2>
+<nav class="sec-navbar" id="Wild" *ngIf="Is_display[2]">
+  <h2 class="h-nav">Wild</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="wildfish/nemo">Nemo</p>
+      <p routerLink="wild/nemo">Nemo</p>
     </li>
     <li>
-      <p routerLink="wildfish/barracuda">Barracuda</p>
+      <p routerLink="wild/barracuda">Barracuda</p>
     </li>
     <li>
-      <p routerLink="wildfish/bluetang">Blue Tang</p>
+      <p routerLink="wild/blue">Blue</p>
     </li>
   </ul>
 </nav>
@@ -131,13 +131,13 @@
   <h2 class="h-nav">Software</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="software/aviko">Aviko Benefits</p>
+      <p routerLink="software/soft">SOFT</p>
     </li>
     <li>
-      <p routerLink="software/polspecialist">Poland Specialist</p>
+      <p routerLink="software/pol">Poland</p>
     </li>
     <li>
-      <p routerLink="software/polskieradio">Player Polskie Radio</p>
+      <p routerLink="software/radio">Radio</p>
     </li>
   </ul>
 </nav>
@@ -145,38 +145,38 @@
   <h2 class="h-nav">Sensory</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="sensory/chilaby">Chilaby</p>
+      <p routerLink="sensory/chil">Chil</p>
     </li>
     <li>
-      <p routerLink="sensory/pinparking">PIN Parking</p>
+      <p routerLink="sensory/pin">PIN</p>
     </li>
     <li>
-      <p routerLink="sensory/isensor">iSensor</p>
-    </li>
-  </ul>
-</nav>
-<nav class="sec-navbar" id="Venite" *ngIf="Is_display[5]">
-  <h2 class="h-nav">Venite</h2>
-  <ul class="sec-nav-ul">
-    <li>
-      <p routerLink="venite/ekarty">eKarty</p>
-    </li>
-    <li>
-      <p routerLink="venite/system">System</p>
+      <p routerLink="sensory/sensor">Sensor</p>
     </li>
   </ul>
 </nav>
-<nav class="sec-navbar" id="Wares" *ngIf="Is_display[6]">
-  <h2 class="h-nav">Wares</h2>
+<nav class="sec-navbar" id="Ven" *ngIf="Is_display[5]">
+  <h2 class="h-nav">Ven</h2>
   <ul class="sec-nav-ul">
     <li>
-      <p routerLink="wares/hotmo">Hotmo</p>
+      <p routerLink="ven/karty">Karty</p>
     </li>
     <li>
-      <p routerLink="wares/integrator">Integrator</p>
+      <p routerLink="ven/system">System</p>
+    </li>
+  </ul>
+</nav>
+<nav class="sec-navbar" id="Ware" *ngIf="Is_display[6]">
+  <h2 class="h-nav">Ware</h2>
+  <ul class="sec-nav-ul">
+    <li>
+      <p routerLink="ware/cos">Cos</p>
     </li>
     <li>
-      <p routerLink="wares/lora">LoRa Advanced</p>
+      <p routerLink="ware/integrator">Integrator</p>
+    </li>
+    <li>
+      <p routerLink="ware/bora">Bora</p>
     </li>
   </ul>
 </nav>

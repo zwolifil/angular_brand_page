@@ -8,6 +8,11 @@
   box-sizing: border-box;
   padding: 0;
 }
+.container {
+  max-width: 90%!important;
+  margin: auto;
+}
+
 .section-heading{
   margin-top:0
 }
@@ -30,7 +35,7 @@ a:hover{
   padding: 80px 0;
 }
 .lead {
-  font-size: 20px !important;
+  font-size: 20px;
   font-weight: 300 !important;
   margin-bottom: 20px !important;
   line-height: 1.5 !important;
@@ -72,3 +77,10 @@ h4 {
   line-height: 25.2px;
   display: block;
 }
+
+@media (max-width: 240px) {
+  .lead a {
+    font-size: 18px;
+  }
+}
+

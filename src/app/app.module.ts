@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule, Routes} from '@angular/router';
 import { CollapseModule} from 'ngx-bootstrap';
+import { NguiParallaxScrollModule} from '@ngui/parallax-scroll';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,20 +29,20 @@ const AppRoutes: Routes = [
   { path: '', redirectTo: '/glowna', pathMatch: 'full'},
   { path: 'glowna', component: MainPageComponent},
   { path: 'glowna/:id', component: MainPageComponent},
-  { path: 'mucount', component: MucountComponent},
-  { path: 'mucount/:id', component: MucountComponent},
-  { path: 'infpl', component: InfplComponent},
-  { path: 'infpl/:id', component: InfplComponent},
-  { path: 'wildfish', component: WildfishComponent},
-  { path: 'wildfish/:id', component: WildfishComponent},
+  { path: 'count', component: MucountComponent},
+  { path: 'count/:id', component: MucountComponent},
+  { path: 'inf', component: InfplComponent},
+  { path: 'inf/:id', component: InfplComponent},
+  { path: 'wild', component: WildfishComponent},
+  { path: 'wild/:id', component: WildfishComponent},
   { path: 'software', component: SoftwareComponent},
   { path: 'software/:id', component: SoftwareComponent},
   { path: 'sensory', component: SensorsComponent},
   { path: 'sensory/:id', component: SensorsComponent},
-  { path: 'venite', component: VeniteComponent},
-  { path: 'venite/:id', component: VeniteComponent},
-  { path: 'wares', component: WaresComponent},
-  { path: 'wares/:id', component: WaresComponent},
+  { path: 'ven', component: VeniteComponent},
+  { path: 'ven/:id', component: VeniteComponent},
+  { path: 'ware', component: WaresComponent},
+  { path: 'ware/:id', component: WaresComponent},
   { path: 'praca', component: WorkComponent},
   { path: 'zapytania_ofertowe', component: QueryRequestComponent}
 ];
@@ -69,6 +70,7 @@ const AppRoutes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     CollapseModule,
+    NguiParallaxScrollModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -136,15 +136,6 @@ label.error { display: none !important; }
 
 /*---------------------------------------------------------------------------------------*/
 
-/* ----------------------------------------------------------------
-	CSS Specific to the One Page Module
-
-	Some of the CSS Codes have been modified from the Original
-	style.css File to match the Minimal Styling of this Module
-
-	Version: 4.0.1
------------------------------------------------------------------*/
-
 
 
 /* ----------------------------------------------------------------------------
@@ -1121,7 +1112,7 @@ textarea.border-form-control {
 .section {
   position: relative;
   margin: 60px 0;
-  padding: 60px 0;
+  padding: 0;
   background-color: #F9F9F9;
   overflow: hidden;
 }
@@ -1374,4 +1365,19 @@ body:not(.device-touch) #gotoTop {
 .swiper-slide{
   background-position-x: 50%;
   background-position-y: 0;
+}
+
+.clearfix {
+  max-width: 100%!important;
+  margin: auto!important;
+  padding: 0!important;
+}
+
+* {
+  max-width: 100%!important;
+}
+
+.contact-widget {
+  width: 90%!important;
+  margin: auto!important;
 }

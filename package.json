@@ -14,8 +14,8 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.4.5",
-    "@angular/common": "^4.2.4",
     "@angular/cli": "1.4.4",
+    "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
     "@angular/forms": "^4.2.4",
@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@ngui/parallax-scroll": "^0.5.1",
     "@ngx-translate/core": "^8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
     "animated-scroll-to": "^1.1.7",

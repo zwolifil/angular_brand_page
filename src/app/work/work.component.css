@@ -173,3 +173,18 @@ body:not(.device-touch) .button {
   margin-top: 0 !important;
 }
 
+.clearfix {
+  max-width: 90%!important;
+  margin: auto;
+}
+
+@media (max-width: 460px) {
+  strong {
+    font-size: 1.1rem;
+  }
+
+  .product_content {
+    margin: 0;
+  }
+}
+

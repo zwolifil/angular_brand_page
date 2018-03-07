@@ -25,6 +25,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.mu-parallax {
   background-image: url('../../../assets/images/slider/multibox.jpg');
 }
 
@@ -289,11 +292,53 @@ button:hover {
   #inline-login p {
     font-size: 1.15rem;
   }
+  .service-box {
+    width: 80%;
+  }
+
 
   #big {
     font-size: 40px!important;
   }
   #currency {
     transform: translate(380%, -250%);
+  }
+}
+
+@media (max-width: 470px) {
+  .service-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 261px) {
+  #big {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #currency {
+    transform: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .div-img {
+    margin: auto;
+  }
+
+  .content {
+    margin: 10% auto;
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  svg {
+    display: none;
   }
 }
